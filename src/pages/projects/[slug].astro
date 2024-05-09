@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { Header } from '../../components/Header';
+
+export async function getStaticPaths() {
+    const projectEntries = await getCollection('projects');
+
+    return projectEntries.map(project => ({
+        params: { slug: project.slug },
+        props: { project },
+    }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<Layout>
+    <div class="bg-zinc-50 min-h-screen">
+        <Header project={project.data} />
+
+        <article class="px-4 py-12 mx-auto">
+            <Content />
+        </article>
+    </div>
+</Layout>
