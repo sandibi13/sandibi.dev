@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { Header } from '../../components/Header';
+import { components } from '../../components/MDX';
+import '../../styles/mdx.css';
 
 export async function getStaticPaths() {
     const projectEntries = await getCollection('projects');
@@ -20,8 +22,8 @@ const { Content } = await project.render();
     <div class="bg-zinc-50 min-h-screen">
         <Header project={project.data} />
 
-        <article class="px-4 py-12 mx-auto">
-            <Content />
+        <article class="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
+            <Content components={components} />
         </article>
     </div>
 </Layout>
