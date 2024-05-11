@@ -1,16 +1,36 @@
 ---
 import '../styles/global.css';
+import { SEO } from 'astro-seo';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>sandibi</title>
+		<SEO
+			titleDefault="Sandi Bi"
+			titleTemplate="%s | Sandi Bi"
+			description="Software Developer, Cybersecurity Enthusiast"
+			openGraph={{
+				basic: {
+					title: "Sandi Bi",
+					url: "https://sandibi.vercel.app",
+					type: "website",
+					image: "https://chronark.com/og.png"
+				},
+				optional: {
+					description: "Software Developer, Cybersecurity Enthusiast",
+					locale: "en-US",
+					siteName: "Sandi Bi",
+				},
+			}}
+			twitter={{
+				title: "Sandi Bi",
+				card: "summary_large_image",
+			}}
+		/>
 	</head>
 	<body class="bg-black">
 		<slot />
