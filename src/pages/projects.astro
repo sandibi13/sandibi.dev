@@ -7,6 +7,23 @@ import { Article } from "../components/Article";
 
 import { getCollection } from "astro:content";
 const allProjects = await getCollection("projects");
+
+import { Eye } from "lucide-react";
+
+import { Redis } from "@upstash/redis";
+const redis = Redis.fromEnv();
+
+const views = (
+  await redis.mget<number[]>(
+    ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":"))
+  )
+).reduce(
+  (acc, v, i) => {
+    acc[allProjects[i].slug] = v ?? 0;
+    return acc;
+  },
+  {} as Record<string, number>
+);
 ---
 
 <Layout>
@@ -39,7 +56,10 @@ const allProjects = await getCollection("projects");
                 .map((project) => (
                   <Card client:load>
                     <a href={`/projects/${project.slug}`}>
-                      <Article project={project.data} />
+                      <Article
+                        project={project.data}
+                        views={views[project.slug] ?? 0}
+                      />
                     </a>
                   </Card>
                 ))
@@ -52,7 +72,10 @@ const allProjects = await getCollection("projects");
                 .map((project) => (
                   <Card client:load>
                     <a href={`/projects/${project.slug}`}>
-                      <Article project={project.data} />
+                      <Article
+                        project={project.data}
+                        views={views[project.slug] ?? 0}
+                      />
                     </a>
                   </Card>
                 ))

@@ -1,29 +1,40 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import { Header } from '../../components/Header';
-import { components } from '../../components/MDX';
-import '../../styles/mdx.css';
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { Header } from "../../components/Header";
+import { components } from "../../components/MDX";
+import "../../styles/mdx.css";
+
+import { Redis } from "@upstash/redis";
+
+const redis = Redis.fromEnv();
 
 export async function getStaticPaths() {
-    const projectEntries = await getCollection('projects');
+  const projectEntries = await getCollection("projects");
 
-    return projectEntries.map(project => ({
-        params: { slug: project.slug },
-        props: { project },
-    }));
+  return projectEntries.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
 }
 
 const { project } = Astro.props;
 const { Content } = await project.render();
+
+const views =
+  (await redis.get<number>(
+    ["pageviews", "projects", project.slug].join(":")
+  )) ?? 0;
 ---
 
 <Layout>
-    <div class="bg-zinc-50 min-h-screen">
-        <Header project={project.data} />
+  <div class="bg-zinc-50 min-h-screen">
+    <Header project={project.data} views={views} />
 
-        <article class="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
-            <Content components={components} />
-        </article>
-    </div>
+    <br />
+
+    <article class="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
+      <Content components={components} />
+    </article>
+  </div>
 </Layout>
