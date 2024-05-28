@@ -81,6 +81,22 @@ const views = (
                 ))
             }
           </div>
+          <div class="grid grid-cols-1 gap-4">
+            {
+              allProjects
+                .filter((_, i) => i % 3 === 2)
+                .map((project) => (
+                  <Card client:load>
+                    <a href={`/projects/${project.slug}`}>
+                      <Article
+                        project={project.data}
+                        views={views[project.slug] ?? 0}
+                      />
+                    </a>
+                  </Card>
+                ))
+            }
+          </div>
         </div>
       </div>
     </div>
