@@ -9,24 +9,21 @@ Special thanks to [@chronark](https://github.com/chronark) for the project templ
 
 <br/>
 
-
 ![Deploy with Vercel](https://vercel.com/button)
 
 ## Running Locally
-
 
 ```sh-session
 git clone https://github.com/sandibi13/sandibi.dev.git
 cd sandibi.dev
 ```
 
-
 Then install dependencies and run the development server:
+
 ```sh-session
 pnpm install
 pnpm dev
 ```
-
 
 ## Cloning / Forking
 

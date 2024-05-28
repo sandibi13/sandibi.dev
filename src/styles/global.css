@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import "cal-sans";
 
 @tailwind base;
@@ -6,15 +6,15 @@
 @tailwind utilities;
 
 * {
-    font-family: "Inter", "Cal Sans", sans-serif;
+  font-family: "Inter", "Cal Sans", sans-serif;
 }
 
 @layer base {
-    .text-edge-outline {
-        -webkit-text-stroke: 1px rgba(255,255,255,0.3);
-    }
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
 }
 
 .font-display {
-    font-family: 'Cal Sans', sans-serif;
+  font-family: "Cal Sans", sans-serif;
 }
