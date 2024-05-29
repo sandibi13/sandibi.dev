@@ -1,7 +1,10 @@
 ---
+export const prerender = true;
+
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { Header } from "../../components/Header";
+import { ReportView } from "../../components/ReportView";
 import { components } from "../../components/MDX";
 import "../../styles/mdx.css";
 
@@ -30,6 +33,7 @@ const views =
 <Layout>
   <div class="bg-zinc-50 min-h-screen">
     <Header project={project.data} views={views} />
+    <ReportView slug={project.slug} client:only="react" />
 
     <br />
 
