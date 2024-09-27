@@ -1,60 +1,50 @@
 ---
-export const prerender = true;
-
 import Layout from "../layouts/Layout.astro";
-import Particles from "../components/Particles";
+import { Particles } from "../components/particles";
 
 const navigation = [
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
-];
+    { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/contact" }
+]
 ---
 
 <Layout>
-  <div
-    class="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black"
-  >
-    <nav class="m-16 animate-fade-in">
-      <ul class="flex items-center justify-center gap-4">
-        {
-          navigation.map((item) => (
-            <a
-              href={item.href}
-              class="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
-            >
-              {item.name}
-            </a>
-          ))
-        }
-      </ul>
-    </nav>
+    <div class="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+        <nav class="my-16 animate-fade-in">
+            <ul class="flex items-center justify-center gap-4">
+                {navigation.map((item) => (
+                    <a href={item.href} class="text-sm duration-500 text-zinc-500 hover:text-zinc-300">
+                        {item.name}
+                    </a>
+                ))}
+            </ul>
+        </nav>
 
-    <div
-      class="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0"
-    >
+        <div class="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+
+        <Particles
+            client:load
+            quantity={100}
+            className="absolute inset-0 -z-10 animate-fade-in"
+        />
+        <h1 class="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
+            sandibi
+        </h1>
+
+        <div class="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+
+        <div class="my-16 mx-10 text-center animate-fade-in">
+            <h2 class="text-sm text-zinc-500">
+                18 year old software developer and cybersecurity enthusiast working on{" "}
+                <a
+                    target="_blank"
+                    href="https://github.com/cybrstir"
+                    class="underline duration-500 hover:text-zinc-300"
+                >
+                    Cybrstir
+                </a>
+                .
+            </h2>
+        </div>
     </div>
-
-    <Particles
-      client:load
-      className="absolute inset-0 -z-10 animate-fade-in"
-      quantity={100}
-    />
-
-    <h1
-      class="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text"
-    >
-      sandibi
-    </h1>
-
-    <div
-      class="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0"
-    >
-    </div>
-
-    <div class="m-16 text-center animate-fade-in">
-      <h2 class="text-sm text-zinc-500">
-        A 17 year old Software Developer who's passionate about programming
-      </h2>
-    </div>
-  </div>
 </Layout>

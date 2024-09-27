@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useMousePosition } from "../utils/mouse";
 
 interface ParticlesProps {
@@ -9,13 +9,13 @@ interface ParticlesProps {
   refresh?: boolean;
 }
 
-export default function Particles({
+export const Particles = ({
   className = "",
   quantity = 30,
   staticity = 50,
   ease = 50,
   refresh = false,
-}: ParticlesProps) {
+}: ParticlesProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
@@ -145,8 +145,8 @@ export default function Particles({
 
   const drawParticles = () => {
     clearContext();
-    const particlesCount = quantity;
-    for (let i = 0; i < particlesCount; i++) {
+    const particleCount = quantity;
+    for (let i = 0; i < particleCount; i++) {
       const circle = circleParams();
       drawCircle(circle);
     }
@@ -194,19 +194,19 @@ export default function Particles({
       circle.translateY +=
         (mouse.current.y / (staticity / circle.magnetism) - circle.translateY) /
         ease;
-      // Circle gets out of the canvas
+      // circle gets out of the canvas
       if (
         circle.x < -circle.size ||
         circle.x > canvasSize.current.w + circle.size ||
         circle.y < -circle.size ||
         circle.y > canvasSize.current.h + circle.size
       ) {
-        // Remove the circle from the array
+        // remove the circle from the array
         circles.current.splice(i, 1);
-        // Create a new circle
+        // create a new circle
         const newCircle = circleParams();
         drawCircle(newCircle);
-        // Update the circle position
+        // update the circle position
       } else {
         drawCircle(
           {
@@ -229,4 +229,4 @@ export default function Particles({
       <canvas ref={canvasRef} />
     </div>
   );
-}
+};

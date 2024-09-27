@@ -1,5 +1,6 @@
+import React from "react";
 import { Github, Mail, Twitter } from "lucide-react";
-import { Card } from "./Card";
+import { Card } from "./card";
 
 const socials = [
   {
@@ -22,11 +23,11 @@ const socials = [
   },
 ];
 
-const Socials = () => {
+export const Socials = () => {
   return (
-    <>
+    <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
       {socials.map((s) => (
-        <Card>
+        <Card key={s.href}>
           <a
             href={s.href}
             target="_blank"
@@ -50,8 +51,6 @@ const Socials = () => {
           </a>
         </Card>
       ))}
-    </>
+    </div>
   );
 };
-
-export default Socials;

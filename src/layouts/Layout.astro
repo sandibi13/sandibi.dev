@@ -1,40 +1,40 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import "../styles/global.css";
 import { SEO } from "astro-seo";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <SEO
-      titleDefault="Sandi Bi"
-      titleTemplate="%s | Sandi Bi"
-      description="Software Developer, Cybersecurity Enthusiast"
-      openGraph={{
-        basic: {
-          title: "Sandi Bi",
-          url: "https://sandibi.vercel.app",
-          type: "website",
-          image: "https://sandibi.vercel.app/og.png",
-        },
-        optional: {
-          description: "Software Developer, Cybersecurity Enthusiast",
-          locale: "en-US",
-          siteName: "Sandi Bi",
-        },
-      }}
-      twitter={{
-        title: "Sandi Bi",
-        card: "summary_large_image",
-      }}
-    />
-    <ViewTransitions />
-  </head>
-  <body class="bg-black">
-    <slot />
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<SEO
+			titleDefault="Sandipan Biwas"
+			titleTemplate="% / Sandipan Biswas"
+			description="Software Developer, Cybersecurity Enthusiast"
+			openGraph={{
+				basic: {
+					title: "Sandipan Biswas",
+					url: "https://sandibi.vercel.app",
+					type: "website",
+					image: "https://sandibi.vercel.app/og.png",
+				},
+				optional: {
+					description: "Software Developer, Cybersecurity Enthusiast",
+					locale: "en-US",
+          			siteName: "Sandipan Biswas",
+				},
+			}}
+			twitter={{
+				title: "Sandipan Biswas",
+				card: "summary_large_image",
+			}}
+		/>
+		<ViewTransitions />
+	</head>
+	<body class="bg-black">
+		<slot />
+	</body>
 </html>

@@ -1,44 +1,31 @@
 ---
-export const prerender = true;
-
-import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import { Header } from "../../components/Header";
-import { ReportView } from "../../components/ReportView";
-import { components } from "../../components/MDX";
+import { Header } from "../../components/header";
+import { components } from "../../components/mdx";
+import { getCollection } from "astro:content";
 import "../../styles/mdx.css";
 
-import { Redis } from "@upstash/redis";
-
-const redis = Redis.fromEnv();
-
 export async function getStaticPaths() {
-  const projectEntries = await getCollection("projects");
+    const projectEntries = await getCollection("project");
 
-  return projectEntries.map((project) => ({
-    params: { slug: project.slug },
-    props: { project },
-  }));
-}
+    return projectEntries.map(project => ({
+        params: { slug: project.slug },
+        props: { project },
+    }));
+};
 
 const { project } = Astro.props;
 const { Content } = await project.render();
-
-const views =
-  (await redis.get<number>(
-    ["pageviews", "projects", project.slug].join(":")
-  )) ?? 0;
 ---
 
 <Layout>
-  <div class="bg-zinc-50 min-h-screen">
-    <Header project={project.data} views={views} />
-    <ReportView slug={project.slug} client:only="react" />
+    <div class="relative min-h-screen bg-gradient-to-tl from-zinc-900 via-zinc-400/10 to-zinc-900">
+        <div class="bg-zinc-50 min-h-screen">
+            <Header project={project.data} />
 
-    <br />
-
-    <article class="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
-      <Content components={components} />
-    </article>
-  </div>
+            <article class="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
+                <Content components={components} />
+            </article>
+        </div>
+    </div>
 </Layout>
