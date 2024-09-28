@@ -10,7 +10,7 @@ export const components = {
     <h1
       className={clsx(
         "mt-2 scroll-m-20 text-4xl font-bold tracking-tight",
-        className
+        className,
       )}
       {...props}
     />
@@ -19,7 +19,7 @@ export const components = {
     <h2
       className={clsx(
         "mt-10 scroll-m-20 border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
-        className
+        className,
       )}
       {...props}
     />
@@ -28,7 +28,7 @@ export const components = {
     <h3
       className={clsx(
         "mt-8 scroll-m-20 text-2xl font-semibold tracking-tight",
-        className
+        className,
       )}
       {...props}
     />
@@ -37,7 +37,7 @@ export const components = {
     <h4
       className={clsx(
         "mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
-        className
+        className,
       )}
       {...props}
     />
@@ -46,7 +46,7 @@ export const components = {
     <h5
       className={clsx(
         "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-        className
+        className,
       )}
       {...props}
     />
@@ -55,7 +55,7 @@ export const components = {
     <h6
       className={clsx(
         "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
-        className
+        className,
       )}
       {...props}
     />
@@ -64,7 +64,7 @@ export const components = {
     <a
       className={clsx(
         "font-medium text-zinc-900 underline underline-offset-4",
-        className
+        className,
       )}
       {...props}
     />
@@ -88,7 +88,7 @@ export const components = {
     <blockquote
       className={clsx(
         "mt-6 border-l-2 border-zinc-300 pl-6 italic text-zinc-800 [&>*]:text-zinc-600",
-        className
+        className,
       )}
       {...props}
     />
@@ -117,7 +117,7 @@ export const components = {
     <tr
       className={clsx(
         "m-0 border-t border-zinc-300 p-0 even:bg-zinc-100",
-        className
+        className,
       )}
       {...props}
     />
@@ -126,7 +126,7 @@ export const components = {
     <th
       className={clsx(
         "border border-zinc-200 px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
-        className
+        className,
       )}
       {...props}
     />
@@ -135,7 +135,7 @@ export const components = {
     <td
       className={clsx(
         "border border-zinc-200 px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
-        className
+        className,
       )}
       {...props}
     />
@@ -144,7 +144,7 @@ export const components = {
     <pre
       className={clsx(
         "mt-6 mb-4 overflow-x-auto rounded-lg bg-zinc-900 py-4",
-        className
+        className,
       )}
       {...props}
     />
@@ -153,7 +153,7 @@ export const components = {
     <code
       className={clsx(
         "relative rounded border bg-zinc-300 bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-sm text-zinc-600",
-        className
+        className,
       )}
       {...props}
     />
