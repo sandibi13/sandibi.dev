@@ -1,9 +1,10 @@
 import React from "react";
-import type { Metadata } from "next";
-import { cn } from "@/lib/utils";
-import { base, heading } from "@/constants/fonts";
-import { ThemeProvider } from "@/components/theme-provider";
 import "../styles/globals.css";
+import type { Metadata } from "next";
+import { base, heading } from "@/constants/fonts";
+import { cn } from "@/lib/utils";
+import { Navbar } from "@/components/navbar";
+import { ThemeProvider } from "@/components/utils/theme-provider";
 
 export const metadata: Metadata = {
   title: "Sandipan Biswas",
@@ -30,6 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

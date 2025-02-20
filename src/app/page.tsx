@@ -2,8 +2,8 @@ import React from "react";
 
 export default function HomePage() {
   return (
-    <div>
+    <main className="relative min-h-screen">
       <h1>Home page</h1>
-    </div>
+    </main>
   );
 }
