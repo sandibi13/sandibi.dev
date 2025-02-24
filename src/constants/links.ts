@@ -1,8 +1,8 @@
 import {
   HomeIcon,
   MailIcon,
-  BriefcaseIcon,
   NotebookIcon,
+  BriefcaseIcon,
   ArchiveIcon,
 } from "lucide-react";
 
@@ -21,14 +21,14 @@ export const primaryLinks = [
 
 export const secondaryLinks = [
   {
-    name: "Projects",
-    icon: BriefcaseIcon,
-    href: "/projects",
-  },
-  {
     name: "Blogs",
     icon: NotebookIcon,
     href: "/blogs",
+  },
+  {
+    name: "Projects",
+    icon: BriefcaseIcon,
+    href: "/projects",
   },
   {
     name: "Archives",
