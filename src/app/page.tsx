@@ -1,9 +1,13 @@
 import React from "react";
+import { GradientBackground } from "@/components/utils/gradient-background";
+import { HomeSection } from "@/components/sections/home-section";
 
 export default function HomePage() {
   return (
-    <main className="relative min-h-screen">
-      <h1>Home page</h1>
-    </main>
+    <GradientBackground>
+      <main className="relative min-h-screen">
+        <HomeSection />
+      </main>
+    </GradientBackground>
   );
 }
