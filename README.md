@@ -4,7 +4,7 @@ Welcome to my developer portfolio! 🚀 This is a work in progress where I showc
 
 ## About Me
 
-I'm a passionate developer specializing in:
+I&apos;m a passionate developer specializing in:
 
 - Full-Stack Web Development (MERN, Next.js, etc.)
 - Blockchain Development (Solidity, Web3, Smart Contracts)

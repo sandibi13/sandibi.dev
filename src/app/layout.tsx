@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { base, heading } from "@/constants/fonts";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/navbar";
+import { BuyMeCoffee } from "@/components/utils/buy-me-coffee";
 import { ThemeProvider } from "@/components/utils/theme-provider";
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <BuyMeCoffee />
         </ThemeProvider>
       </body>
     </html>

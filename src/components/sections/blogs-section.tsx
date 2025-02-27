@@ -11,9 +11,10 @@ export const BlogsSection = () => {
         <AnimationContainer className="w-full flex flex-col gap-5 mb-8">
           <p className="text-base text-justify lg:leading-8 text-foreground/80">
             Welcome to my digital notebook! Here I write about the interesting
-            problems I've solved, share tips and tricks I wish I knew earlier,
-            and document my journey through the world of software development.
-            No fancy jargon, just honest experiences and helpful insights.
+            problems I&apos;ve solved, share tips and tricks I wish I knew
+            earlier, and document my journey through the world of software
+            development. No fancy jargon, just honest experiences and helpful
+            insights.
           </p>
         </AnimationContainer>
       </div>

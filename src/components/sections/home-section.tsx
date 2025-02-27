@@ -1,26 +1,32 @@
 import React from "react";
 import { Wrapper } from "../utils/wrapper";
+import { Hero } from "../contents/hero";
+import { AboutMe } from "../contents/about-me";
+import { Experiences } from "../contents/experiences";
+import { Featured } from "../contents/featured";
+import { MySkills } from "../contents/my-skills";
+import { Reviews } from "../contents/reviews";
 
 export const HomeSection = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center relative">
       <Wrapper className="lg:max-w-screen-lg">
-        <h1>Hero</h1>
+        <Hero />
       </Wrapper>
       <Wrapper>
-        <h1>About Me</h1>
+        <AboutMe />
       </Wrapper>
       <Wrapper>
-        <h1>Experience</h1>
+        <Experiences />
       </Wrapper>
       <Wrapper>
-        <h1>Projects & Blogs</h1>
+        <Featured />
       </Wrapper>
       <Wrapper>
-        <h1>My Skills</h1>
+        <MySkills />
       </Wrapper>
       <Wrapper>
-        <h1>Reviews</h1>
+        <Reviews />
       </Wrapper>
       <Wrapper>
         <h1>CTA</h1>
