@@ -1,5 +1,7 @@
 import React from "react";
 import { AnimationContainer } from "../utils/animation-container";
+import { skills } from "@/constants/skills";
+import { ShowSkills } from "../utils/show-skills";
 
 export const MySkills = () => {
   return (
@@ -25,6 +27,25 @@ export const MySkills = () => {
           </p>
         </div>
       </AnimationContainer>
+
+      <div className="flex flex-col pt-10 w-full">
+        <div className="flex flex-col flex-wrap items-start gap-5">
+          {skills.map((skill, index) => (
+            <AnimationContainer
+              key={skill.title}
+              delay={0.1 * index + 0.1}
+              className="flex flex-col mb-4"
+            >
+              <div className="space-y-3">
+                <h3 className="text-lg font-bold">{skill.title}</h3>
+                <div className="flex flex-wrap items-center gap-4">
+                  <ShowSkills stacks={skill.stack} />
+                </div>
+              </div>
+            </AnimationContainer>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
