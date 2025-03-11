@@ -1,26 +1,33 @@
-<div align="center">
-    <a href="https://sandibi.vercel.app"><h1 align="center">sandibi.dev</h1></a>
+# My Developer Portfolio
 
-My personal portfolio website, built with [Astro.js](https://astro.build/), [Tailwind CSS](https://tailwindcss.com/) and deployed to [Vercel](https://vercel.com/).
+Welcome to my developer portfolio! 🚀 This is a work in progress where I showcase my skills, projects, and experience in full-stack web development, blockchain, and AI.
 
-Special thanks to [@chronark](https://github.com/chronark) for the project template.
+## About Me
 
-</div>
+I&apos;m a passionate developer specializing in:
 
-## Running Locally
+- Full-Stack Web Development (MERN, Next.js, etc.)
+- Blockchain Development (Solidity, Web3, Smart Contracts)
+- AI & Machine Learning (LLMs, AI-driven applications)
+- Cybersecurity & Ethical Hacking (Kali Linux, Penetration Testing)
 
-```sh-session
-git clone https://github.com/sandibi13/sandibi.dev.git
-cd sandibi.dev
-```
+Currently, I am building my portfolio to demonstrate my expertise and work on exciting projects, including AI SaaS applications and blockchain solutions.
 
-Then install dependencies and run the development server:
+## Portfolio Overview
 
-```sh-session
-pnpm install
-pnpm dev
-```
+- **Projects:** A collection of web, AI, and blockchain applications.
+- **Blog:** Insights and technical write-ups on development and security.
+- **Resume:** My professional experience and skills.
 
-## Cloning / Forking
+## Work in Progress
 
-Please remove all of my personal information (projects, images, etc.) before deploying your own version of this site.
+This portfolio is continuously evolving. Stay tuned for updates!
+
+## Connect with Me
+
+- **GitHub:** https://github.com/sandibi13
+- **LinkedIn:** https://linkedin.com/in/sandibi13
+- **Twitter/X:** https://x.com/sandibi13
+- **Email:** mailto:sandipanb223@gmail.com
+
+Looking forward to collaborating and sharing my journey! 😊
