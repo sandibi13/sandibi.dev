@@ -1,15 +1,21 @@
 export interface ProjectProps {
-  index: number;
+  index?: number;
   title: string;
   description: string;
+  url?: string;
+  repository?: string;
 }
 
 export interface BlogProps {
-  index: number;
+  index?: number;
   title: string;
   description: string;
 }
 
 export interface ReviewProps {
-  index: number;
+  index?: number;
+  name: string;
+  text: string;
+  rating: number;
+  company: string;
 }
