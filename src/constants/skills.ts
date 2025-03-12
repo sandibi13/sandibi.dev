@@ -1,62 +1,18 @@
 export const skills = [
   {
-    title: "Languages",
-    stack: ["HTML", "CSS", "JavaScript", "TypeScript", "Python"],
+    title: "Programming Languages",
+    stack: ["TypeScript", "Python", "Golang", "C++", "Solidity"],
   },
   {
-    title: "Frontend Frameworks",
-    stack: ["React", "Next.js", "React Native", "Vite"],
+    title: "Programming Frameworks",
+    stack: ["Next.js", "Tailwind CSS", "Astro.js", "Flask", "React Native"],
   },
   {
-    title: "Javascript Libraries",
-    stack: ["React Query", "Zustand", "Emotion", "Axios", "SWR"],
-  },
-  {
-    title: "CSS Styling & Motion Libraries",
-    stack: [
-      "Tailwind CSS",
-      "Framer Motion",
-      "Styled Components",
-      "Chakra UI",
-      "Magic UI",
-      "Aceternity UI",
-      "Material UI",
-      "Shadcn UI",
-      "Next UI",
-      "Bootstrap",
-    ],
-  },
-  {
-    title: "Backend Technologies",
-    stack: ["Node.js", "Express.js", "Mongoose", "Prisma", "GraphQL", "Flask"],
-  },
-  {
-    title: "Databases",
-    stack: ["MongoDB", "Firebase", "Supabase", "NeonDB"],
+    title: "Databases & ORMs",
+    stack: ["PostgreSQL", "MongoDB", "Supabase", "Prisma", "Drizzle"],
   },
   {
     title: "Software & Tools",
-    stack: [
-      "VS Code",
-      "Cursor",
-      "Git",
-      "GitHub",
-      "Eslint",
-      "Figma",
-      "VN",
-      "Postman",
-      "Notion",
-    ],
-  },
-  {
-    title: "Currently Learning & Exploring",
-    stack: [
-      "Socket.io",
-      "Docker",
-      "AWS",
-      "React Testing Library",
-      "Tailwind JIT",
-      "Storybook",
-    ],
+    stack: ["VSCode", "Docker", "GitHub", "AWS", "Vercel"],
   },
 ];

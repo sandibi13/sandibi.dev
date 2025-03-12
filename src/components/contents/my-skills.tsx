@@ -37,7 +37,7 @@ export const MySkills = () => {
               className="flex flex-col mb-4"
             >
               <div className="space-y-3">
-                <h3 className="text-lg font-bold">{skill.title}</h3>
+                <h3 className="text-lg font-medium">{skill.title}</h3>
                 <div className="flex flex-wrap items-center gap-4">
                   <ShowSkills stacks={skill.stack} />
                 </div>
